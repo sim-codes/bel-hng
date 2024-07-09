@@ -1,19 +1,8 @@
 import Image from "next/image";
 import mercyImage from "@/public/mercy.png";
-import axios from 'axios';
 import Link from "next/link";
 
 export default function Home() {
-  const handleDownload = async () => {
-    try {
-        const response = await axios.get('/api/');
-        // Handle success, typically the browser will start downloading the file automatically
-    } catch (error) {
-        // Handle error
-        console.error('Failed to download file', error);
-    }
-  };
-
   return (
     <main className="flex flex-col min-h-screen gap-10 px-24">
       <div className="min-h-[80vh] max-w-4xl mx-auto flex flex-col gap-5 justify-center items-center">
